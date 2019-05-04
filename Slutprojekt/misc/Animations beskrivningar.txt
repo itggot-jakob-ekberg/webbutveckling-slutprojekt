@@ -1,0 +1,7 @@
+På frammsidan på både mobile och desktop finns det tre rutor som ska innehålla bilder sen.
+Jag vill använda en hover effekt så att när man hoverar över en av låderna expanderas en mörk låda från
+botten. Den ska ha lite text och en läs mer knapp.
+
+På mobile ska det vara något liknande men det ska inte vara en hover effekt längre, då man inte kan
+"hover" på mobil.
+

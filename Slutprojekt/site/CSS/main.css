@@ -4,11 +4,24 @@ body{
 
 .wrapper{
     background-color: #6A6A6A;
-
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 375px 86px 70px 318px 100px 318px 100px 318px 70px ;
+    grid-template-areas: 
+    "headpic"
+    "header"
+    "."
+    "Projects"
+    "."
+    "Contact"
+    "."
+    "Team"
+    ".";
 }
 
 .frontpic{
     height: 375px;
+    grid-area: headpic;
 }
 
 header{
@@ -17,6 +30,7 @@ header{
     position: sticky;
     top: 0;
     display: flex;
+    grid-area: "header";
 }
 
 i.material-icons{
@@ -62,17 +76,77 @@ li{
     align-items: center;
 }
 
-a{
+a{ 
     color: white;
-    font-size: 23px;
     font-family: 'Catamaran', sans-serif;
     font-weight: bold;
     text-decoration: none;
 }
 
+
+ul a{
+    font-size: 25px;
+}
+
+.f-projects{
+    grid-area: Projects;
+}
+
+.f-contact{
+    grid-area: Contact;
+}
+
+.f-team{
+    grid-area: Team;
+}
+
 .frontbox{
     background-color: #8BAA8B;
     height: 318px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+}
+
+.collapsebox{
+    background-color: rgba(0, 0, 0, 0.72);
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    display: grid;
+    grid-template-columns: 100% ;
+    grid-template-rows: auto 54px 27px;
+}
+
+
+.frontbox:hover .collapsebox{
+    height: 318px;
+    width: 100%;
+}
+
+.collapselink{
+    background-color: #828D68;
+    font-size: 23px;
+    width: 170px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: all;
+}
+
+h2{
+    color: white;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    margin: 0;
+}
+
+.text{
+    margin: 32px;
+}
+
+.centerbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events:none;
 }
