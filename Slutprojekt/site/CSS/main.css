@@ -6,7 +6,7 @@ body{
     background-color: #6A6A6A;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 375px 86px 70px 318px 100px 318px 100px 318px 70px ;
+    grid-template-rows: 318px 86px 70px 318px 100px 318px 100px 318px 70px ;
     grid-template-areas: 
     "headpic"
     "header"
@@ -17,6 +17,11 @@ body{
     "."
     "Team"
     ".";
+}
+
+.Text{
+    color: white;
+    font-family: 'Catamaran', sans-serif;
 }
 
 .frontpic{
@@ -31,6 +36,7 @@ header{
     top: 0;
     display: flex;
     grid-area: "header";
+    z-index: 100;
 }
 
 i.material-icons{
@@ -39,6 +45,7 @@ i.material-icons{
     margin-left: 15px;
     margin-bottom: auto;
     margin-top: auto;
+    z-index: 101;
 }
 
 .menubox{
@@ -57,7 +64,15 @@ i.material-icons{
 .seperator{
     background-color: white;
     height: 5px;
-    width: 100%
+    width: 100%;
+    border-radius: 5px;
+}
+
+.big-sep{
+    height: 7px;
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 ul{
@@ -77,8 +92,6 @@ li{
 }
 
 a{ 
-    color: white;
-    font-family: 'Catamaran', sans-serif;
     font-weight: bold;
     text-decoration: none;
 }
@@ -140,7 +153,7 @@ h2{
     margin: 0;
 }
 
-.text{
+.centertext{
     margin: 32px;
 }
 
@@ -148,5 +161,235 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events:none;
+}
+
+.twitterlink{
+    background-image: url(../img/twitterlogo-mobile.png);
+    width: 230px ;
+    height: 200px ;
+}
+
+.wrapp-C {
+    grid-template-rows: 318px 86px 160px 240px 50px 60px 30px 10px 180px 50px 200px 70px ;
+    grid-template-areas: 
+    "Contact"
+    "header"
+    "Title"
+    "email-text"
+    "."
+    "email"
+    "."
+    "sep"
+    "twitter-text"
+    "."
+    "twitter"
+    ".";
+}
+
+.titlebox{
+    grid-area: Title;
+    background-color:#8BAA8B;
+    color: white;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.mediumtext{
+    font-size: 35px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.email-text{
+    grid-area: email-text;
+}
+
+.semiboldsmall{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.email{
+    grid-area: email;
+}
+
+.c-sep{
+    grid-area: sep;
+}
+
+.tw-text{
+    grid-area: twitter-text;
+}
+
+.tw-link{
+    grid-area: twitter;
+}
+
+.wrapp-T{
+    grid-template-rows: 318px 86px 160px 70px 210px auto auto 50px 5px 30px 210px auto auto 50px 5px 70px auto 30px ;
+    grid-template-areas: 
+    "Team"
+    "header"
+    "Title"
+    "."
+    "Pic1"
+    "Name1"
+    "Desc1"
+    "."
+    "Sep1"
+    "."
+    "Pic2"
+    "Name2"
+    "Desc2"
+    "."
+    "Sep2"
+    "."
+    "More"
+    ".";
+}
+
+
+.Profile{
+    height: 190px;
+    width: 150px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    /* background-image: url() */
+}
+
+.name{
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 10px;
+}
+
+.description{
+    font-size: 35px;
+    margin: 10px;
+}
+
+.more{
+    font-size: 40px;
+    font-weight: bold;
+    grid-area: More;
+    margin: 10px;
+}
+
+.P-Jk{
+    grid-area: Pic1;
+}
+
+.N-Jk{
+    grid-area: Name1;
+}
+
+.D-Jk{
+    grid-area: Desc1;
+}
+
+.P-Jc{
+    grid-area: Pic2;
+}
+
+.N-Jc{
+    grid-area: Name2;
+}
+
+.D-Jc{
+    grid-area: Desc2;
+}
+
+.t-sep1{
+    grid-area: Sep1;
+}
+
+.t-sep2{
+    grid-area: Sep2;
+}
+
+.wrapp-P{
+    grid-template-rows: 318px 86px 160px 70px auto 30px auto 30px 7px 30px auto 50px ;
+    grid-template-areas: 
+    "Projects"
+    "header"
+    "Title"
+    "."
+    "trailer"
+    "."
+    "picalbum"
+    "."
+    "sep"
+    "."
+    "game-desc"
+    ".";
+}
+
+.trailer{
+    grid-area: trailer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picturealbum{
+    grid-area: picalbum;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.P-sep{
+    grid-area: sep;
+}
+
+.game-desc{
+    grid-area: game-desc;
+}
+
+.mySlides{
+    width: 320px;
+    height: 280px;
+}
+
+.pic1{
+    background-color: bisque;
+}
+
+.pic2{
+    background-color: coral;
+}
+
+.pic3{
+    background-color: brown;
+}
+
+.pic4{
+    background-color: cornflowerblue;
+}
+
+.leftbutton{
+    position: absolute;
+    left: 15px;
+}
+
+.rightbutton{
+    position: absolute;
+    right: 15px;
+}
+
+.smalltext{
+    font-size: 24px;
+    margin-right: 30px;
+    margin-left: 30px;
 }
