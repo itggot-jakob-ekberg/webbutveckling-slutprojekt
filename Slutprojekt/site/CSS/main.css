@@ -3,6 +3,7 @@ body{
 }
 
 .wrapper{
+    min-height: 100vh;
     background-color: #6A6A6A;
     display: grid;
     grid-template-columns: 100%;
@@ -35,7 +36,7 @@ header{
     position: sticky;
     top: 0;
     display: flex;
-    grid-area: "header";
+    grid-area: header;
     z-index: 100;
 }
 
@@ -130,7 +131,7 @@ ul a{
 
 
 .frontbox:hover .collapsebox{
-    height: 318px;
+    height: 100%;
     width: 100%;
 }
 
@@ -378,6 +379,12 @@ h2{
     background-color: cornflowerblue;
 }
 
+button{
+    background-color: rgb(50, 50, 50);
+    border-color: rgb(30, 30, 30);
+    color: white;
+}
+
 .leftbutton{
     position: absolute;
     left: 15px;
@@ -393,3 +400,196 @@ h2{
     margin-right: 30px;
     margin-left: 30px;
 }
+
+.deskonly{
+    display: none;
+}
+
+.mobileonly{
+    display: initial;
+}
+
+@media only screen and (min-width: 768px){
+
+    .deskonly{
+        display: initial;
+    }
+
+    .mobileonly{
+        display: none;
+    }
+
+    header{
+        height: 100%;
+        width: 220px;
+        position: sticky;
+        display: flex;
+        grid-area: header;
+        grid-row: span 8;
+    }
+
+    i.material-icons{
+        display: none;
+    }
+
+    .logo{
+        width: 150px;
+        height: 150px;
+        background-color: honeydew;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: auto ;
+        margin-right: auto ;
+    }
+    
+    .menubox{
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        position: static;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 30% ;
+    }
+    
+    ul{
+        padding: 0;
+        margin: 20px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    
+    li{
+        margin-top: 20px ;
+        margin-bottom: 20px ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper{
+        grid-template-columns: 220px 1fr 1fr 1fr;
+        grid-template-rows: 620px auto;    
+        grid-template-areas: 
+        "header headpic headpic headpic"
+        ". Projects Contact Team"
+    }
+
+    .frontpic{
+        height: 600px;
+        background-color: darkgreen;
+    }
+
+    .frontbox{
+        margin: 20px;
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+
+    .wrapp-C {
+        grid-template-rows: auto 10px auto auto auto 10px;
+        grid-template-columns: 220px 10% 1fr 200px 1fr 10% ;
+        grid-template-areas: 
+        "header . Title . . ."
+        ". . sep1 . sep ."
+        ". . email-text . twitter-text ."
+        ". . email . twitter ."
+        ". . . . . ."
+        ". . sep2 . sep3 ." ;
+    }
+
+    .big-sep{
+        height: 10px;
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .c-sep1{
+        grid-area: sep1;
+    }
+
+    .c-sep2{
+        grid-area: sep2;
+    }
+
+    .c-sep3{
+        grid-area: sep3;
+    }
+
+    .titlebox{
+        grid-area: Title;
+        font-size: 50px;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 100px;
+        height: 175px ;
+        width: 550px;
+    }
+
+    .tw-link{
+        grid-row: span 2;
+    }
+
+    .wrapp-T{
+        grid-template-columns: 220px 10% 250px auto 200px 250px auto 10%  ;
+        grid-template-rows: auto 10px 100px 150px 10px auto ;
+        grid-template-areas: 
+        "header . Title . . . . ."
+        ". . Pic1 Sep3 . Pic2 Sep4 ."
+        ". . . Name1 . . Name2 ."
+        ". . . Desc1 . . Desc2 ."
+        ". . . Sep1 . . Sep2 ."
+        ". . . More . . . ." ;
+    }
+
+    .t-sep3{
+        grid-area: Sep3;
+    }
+    
+    .t-sep4{
+        grid-area: Sep4;
+    }
+
+    
+    .Profile{
+        height: 285px;
+        width: 220px;
+        margin: 0;
+        grid-row: span 4;
+
+        /* background-image: url() */
+    }
+
+    .name{
+        font-size: 45px;
+        margin: 0px;
+    }
+
+    .description{
+        font-size: 40px;
+        margin: 0px;
+    }
+
+}
+
+/* "Team"
+"header"
+"Title"
+"."
+"Pic1"
+"Name1"
+"Desc1"
+"."
+"Sep1"
+"."
+"Pic2"
+"Name2"
+"Desc2"
+"."
+"Sep2"
+"."
+"More"
+"." */
