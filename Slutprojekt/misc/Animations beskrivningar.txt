@@ -5,3 +5,5 @@ botten. Den ska ha lite text och en läs mer knapp.
 På mobile ska det vara något liknande men det ska inte vara en hover effekt längre, då man inte kan
 "hover" på mobil.
 
+Menyn ska expandera från under header
+

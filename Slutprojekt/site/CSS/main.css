@@ -26,8 +26,10 @@ body{
 }
 
 .frontpic{
-    height: 375px;
+    height: 318px;
     grid-area: headpic;
+    background-image: url("../img/Forest-daylight-Mobile.png");
+    background-size: cover; 
 }
 
 header{
@@ -51,15 +53,18 @@ i.material-icons{
 
 .menubox{
     height: 0;
+    width: 100vw;
     background-color: #828D68;
     position: absolute;
+    top: 86px;
     overflow: hidden;
+    transition: height 0.3s;
 }
 
 .activate{
     height: 325px;
     width: 100vw;
-    top: 86px;
+
 }
 
 .seperator{
@@ -104,35 +109,44 @@ ul a{
 
 .f-projects{
     grid-area: Projects;
+    background-image: url("../img/Projects.png");
 }
 
 .f-contact{
     grid-area: Contact;
+    background-image: url("../img/Contact.png");
 }
 
 .f-team{
     grid-area: Team;
+    background-image: url("../img/Team.png");
 }
 
 .frontbox{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-color: #8BAA8B;
     height: 318px;
+    display: flex;
+    align-items: flex-end;
 }
 
 .collapsebox{
     background-color: rgba(0, 0, 0, 0.72);
     overflow: hidden;
     height: 0;
-    width: 0;
+    width: 100%;
     display: grid;
     grid-template-columns: 100% ;
     grid-template-rows: auto 54px 27px;
+    transition: 0.3s ease-out;
+
 }
 
 
 .frontbox:hover .collapsebox{
     height: 100%;
-    width: 100%;
 }
 
 .collapselink{
@@ -260,12 +274,12 @@ h2{
 
 .Profile{
     height: 190px;
-    width: 150px;
+    width: 147px;
     background-color: white;
     margin-bottom: 20px;
     margin-left: 10px;
-    /* background-image: url() */
 }
+
 
 .name{
     font-size: 40px;
@@ -288,6 +302,7 @@ h2{
 
 .P-Jk{
     grid-area: Pic1;
+    background-image: url("../img/Jak-Ek-Profile-Mobile.png");
 }
 
 .N-Jk{
@@ -300,6 +315,7 @@ h2{
 
 .P-Jc{
     grid-area: Pic2;
+    background-image: url("../img/Jac-Sa-Profile-Mobile.png");
 }
 
 .N-Jc{
@@ -340,6 +356,18 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #464646;
+    opacity: 10%;    
+    width: 320px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trailer-text{
+    font-weight: bold;
+    font-size: 35px;
+    margin: 20px;
 }
 
 .picturealbum{
@@ -364,34 +392,29 @@ h2{
 }
 
 .pic1{
-    background-color: bisque;
+    background-image: url("../img/Screenshot-1-Mobile.png");
 }
 
 .pic2{
-    background-color: coral;
+    background-image: url("../img/Screenshot-2-Mobile.png");
 }
 
 .pic3{
-    background-color: brown;
-}
-
-.pic4{
-    background-color: cornflowerblue;
+    background-image: url("../img/Screenshot-3-Mobile.png");
 }
 
 button{
     background-color: rgb(50, 50, 50);
     border-color: rgb(30, 30, 30);
     color: white;
+    position: absolute;
 }
 
 .leftbutton{
-    position: absolute;
     left: 15px;
 }
 
 .rightbutton{
-    position: absolute;
     right: 15px;
 }
 
@@ -409,6 +432,9 @@ button{
     display: initial;
 }
 
+
+
+
 @media only screen and (min-width: 768px){
 
     .deskonly{
@@ -420,7 +446,7 @@ button{
     }
 
     header{
-        height: 100%;
+        height: 100vh;
         width: 220px;
         position: sticky;
         display: flex;
@@ -435,7 +461,7 @@ button{
     .logo{
         width: 150px;
         height: 150px;
-        background-color: honeydew;
+        background-image: url("../img/Logo.png");
         margin-top: 20px;
         margin-bottom: 20px;
         margin-left: auto ;
@@ -472,12 +498,14 @@ button{
         grid-template-rows: 620px auto;    
         grid-template-areas: 
         "header headpic headpic headpic"
-        ". Projects Contact Team"
+        "header Projects Contact Team"
     }
 
     .frontpic{
         height: 600px;
-        background-color: darkgreen;
+        background-image: url("../img/Forest-daylight-desktop.png");
+        background-size: cover;
+
     }
 
     .frontbox{
@@ -488,14 +516,14 @@ button{
 
     .wrapp-C {
         grid-template-rows: auto 10px auto auto auto 10px;
-        grid-template-columns: 220px 10% 1fr 200px 1fr 10% ;
+        grid-template-columns: 220px 7% 1fr 200px 1fr 7% ;
         grid-template-areas: 
         "header . Title . . ."
-        ". . sep1 . sep ."
-        ". . email-text . twitter-text ."
-        ". . email . twitter ."
-        ". . . . . ."
-        ". . sep2 . sep3 ." ;
+        "header . sep1 . sep ."
+        "header . email-text . twitter-text ."
+        "header . email . twitter ."
+        "header . . . . ."
+        "header . sep2 . sep3 ." ;
     }
 
     .big-sep{
@@ -522,11 +550,12 @@ button{
         font-size: 50px;
         border-bottom-left-radius: 100px;
         border-bottom-right-radius: 100px;
-        margin-right: auto;
-        margin-left: auto;
+        margin: 0;
         margin-bottom: 100px;
         height: 175px ;
         width: 550px;
+        position: relative;
+        left: 0;
     }
 
     .tw-link{
@@ -534,15 +563,16 @@ button{
     }
 
     .wrapp-T{
-        grid-template-columns: 220px 10% 250px auto 200px 250px auto 10%  ;
-        grid-template-rows: auto 10px 100px 150px 10px auto ;
+        grid-template-columns: 220px 7% 250px auto 200px 250px auto 7%  ;
+        grid-template-rows: auto 10px 100px 185px 10px 100px auto ;
         grid-template-areas: 
         "header . Title . . . . ."
-        ". . Pic1 Sep3 . Pic2 Sep4 ."
-        ". . . Name1 . . Name2 ."
-        ". . . Desc1 . . Desc2 ."
-        ". . . Sep1 . . Sep2 ."
-        ". . . More . . . ." ;
+        "header . Pic1 Sep3 . Pic2 Sep4 ."
+        "header . . Name1 . . Name2 ."
+        "header . . Desc1 . . Desc2 ."
+        "header . . Sep1 . . Sep2 ."
+        "header . . . . . . ."
+        "header . . . More . . ." ;
     }
 
     .t-sep3{
@@ -559,8 +589,14 @@ button{
         width: 220px;
         margin: 0;
         grid-row: span 4;
+    }
 
-        /* background-image: url() */
+    .P-Jk{
+        background-image: url("../img/Jak-Ek-Profile-Desktop.png");
+    }
+
+    .P-Jc{
+        background-image: url("../img/Jac-Sa-Profile-Desktop.png");
     }
 
     .name{
@@ -572,24 +608,82 @@ button{
         font-size: 40px;
         margin: 0px;
     }
+    
+    .wrapp-P{
+        grid-template-columns: 220px 7% auto 50px auto 7% ;
+        grid-template-rows: auto 10px auto 10px auto 7% ;
+        grid-template-areas: 
+        "header . Title . . ."
+        "header . picalbum . sep ."
+        "header . . . game-desc ."
+        "header . . . sep2 ."
+        "header . trailer trailer trailer ." ;
+    }
+
+    .P-sep2{
+        grid-area: sep2;
+    }
+
+    .picturealbum{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        grid-row: span 3;
+    }
+
+    .mySlides{
+        width: 701px;
+        height: 394px;
+    }
+
+    .leftbutton{
+        position: absolute;
+        left: 15px;
+    }
+    
+    .rightbutton{
+        position: absolute;
+        right: 15px;
+    }
+    
+    .game-desc{
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .trailer{
+        grid-area: trailer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #464646;
+        opacity: 10%;    
+        width: 920px;
+        height: 517.5px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 70px;
+        margin-top: 70px;
+        
+    }
+    
+    .trailer-text{
+        font-weight: bold;
+        font-size: 40px;
+        margin: 20px;
+    }
+
+    .pic1{
+        background-image: url("../img/Screenshot-1-Desktop.png")
+    }
+
+    .pic2{
+        background-image: url("../img/Screenshot-2-Desktop.png")
+    }
+
+    .pic3{
+        background-image: url("../img/Screenshot-3-Desktop.png")
+    }
 
 }
-
-/* "Team"
-"header"
-"Title"
-"."
-"Pic1"
-"Name1"
-"Desc1"
-"."
-"Sep1"
-"."
-"Pic2"
-"Name2"
-"Desc2"
-"."
-"Sep2"
-"."
-"More"
-"." */
