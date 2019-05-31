@@ -1,5 +1,5 @@
 function menu(event){
-    let hea = document.querySelector(".menubox")
+    let hea = document.querySelector("nav")
     hea.classList.toggle("activate")
 
     let icon = document.querySelector("#menubutton")

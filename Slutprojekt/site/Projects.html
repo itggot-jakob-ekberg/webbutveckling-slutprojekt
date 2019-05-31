@@ -7,16 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="CSS/main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:400,600,700|Montserrat:400,700&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
     <div class="wrapper wrapp-P">
-        <div class="frontbox f-projects mobileonly"></div>
+        <figure class="frontbox f-projects mobileonly"></figure>
+
         <header>
             <i class="material-icons" id="menubutton" onclick="menu()">menu</i>
-            <div class="menubox">
+            <nav>
                 <div class="logo deskonly"></div>
                 <ul>
                     <li><a href="index.html" class="Text">Home</a></li>
@@ -27,12 +29,16 @@
                     <div class="seperator"></div>
                     <li><a href="Team.html" class="Text">Team</a></li>
                 </ul>
-            </div>
+            </nav>
         </header>
 
-        <div class="titlebox">Projects</div>
+        <figure class="titlebox">Projects</figure>
 
-        <div class="trailer"><div class="centerbox"><div class="trailer-text Text"> TRAILER CURRENTLY IN PROGRESS </div></div></div>
+        <figure class="trailer">
+            <div class="centerbox">
+                <p class="trailer-text Text"> TRAILER CURRENTLY IN PROGRESS </p>
+            </div>
+        </figure>
 
         <div class="picturealbum">
             <button class="leftbutton" onclick="plusDivs(-1)">&#10094;</button>
@@ -47,10 +53,37 @@
 
         <div class="seperator big-sep P-sep"></div>
 
-        <div class="smalltext Text game-desc">Fight and explore through a vast world filled with perculiar characters on
-            your quest to revive the sun. The first game made by Jackob studios inspired by classic titles such as the legend of zelda and many many more...</div>
+        <article class="smalltext Text game-desc">
+            Fight and explore through a vast world filled with perculiar characters on
+            your quest to revive the sun. The first game made by Jackob studios inspired by classic titles such as the
+            legend of zelda and many many more...
+        </article>
 
-        <div class="seperator big-sep P-sep2 deskonly"></div>
+        <div class="seperator big-sep P-sep2"></div>
+        <section class="review-container">
+
+            <section class="review">
+                <h3 class="Text2">MR.Man</h3>
+                <h3 class="Text2">5/5</h3>
+                <p class="rev_text Text2">Very good game, Really love the character designs.The only thing missing is
+                    the actual game. Other
+                    than that this game is amazing. I love the fact that you can olny attack and face downwards </p>
+            </section>
+
+            <section class="review">
+                <h3 class="Text2">Super_69_Reviews</h3>
+                <h3 class="Text2">4/5</h3>
+                <p class="rev_text Text2">Amazing game love it. however I think it should need an easy mode because I
+                    can't seem to get past the tutorial. Game is very hard. </p>
+            </section>
+
+            <section class="review">
+                <h3 class="Text2">Bob</h3>
+                <h3 class="Text2">2/5</h3>
+                <p class="rev_text Text2">This game doesent even work on my gameboy color that I dropped in cola </p>
+            </section>
+
+        </section>
     </div>
     <script src="Js/main.js"></script>
 </body>
